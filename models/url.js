@@ -6,8 +6,9 @@ const urlSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now,
+     expires: 1800
   },
-  expiryDate: Date, 
+  expiryDate: Date,
   visitHistory: [
     {
       timestamp: {
@@ -21,3 +22,4 @@ const urlSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("URL", urlSchema);
+
